@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suprema Pizza - A melhor pizza delivery da cidade! Pizzas artesanais com ingredientes frescos e de qualidade.">
+    <meta name="keywords" content="pizza, delivery, pizzaria, suprema pizza, comida italiana">
+    <title>Suprema Pizza - Delivery de Pizzas Artesanais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-pizza-slice"></i>
+                    <span>Suprema Pizza</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Cardápio</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Galeria</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Bem-vindo à <span>Suprema Pizza</span></h1>
+            <p class="hero-subtitle">Pizzas artesanais feitas com paixão e ingredientes frescos</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver Cardápio</a>
+                <a href="#contact" class="btn btn-secondary">Faça seu Pedido</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Entrega em 40min</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-leaf"></i>
+                    <span>Ingredientes Frescos</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-fire"></i>
+                    <span>Forno à Lenha</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#menu"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosso Cardápio</h2>
+                <p class="section-subtitle">Pizzas artesanais preparadas com os melhores ingredientes</p>
+            </div>
+
+            <!-- Menu Filters -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="tradicional">Tradicionais</button>
+                <button class="filter-btn" data-filter="especial">Especiais</button>
+                <button class="filter-btn" data-filter="doce">Doces</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+                <!-- Pizza 1 -->
+                <div class="menu-card" data-category="tradicional">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&h=500&fit=crop" alt="Pizza Margherita">
+                        <div class="menu-card-badge">Clássica</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Margherita</h3>
+                        <p class="menu-card-description">Molho de tomate, mussarela, tomate fresco, manjericão e azeite</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 35,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Margherita" data-price="35.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="menu-card" data-category="tradicional">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=500&fit=crop" alt="Pizza Calabresa">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Calabresa</h3>
+                        <p class="menu-card-description">Molho de tomate, mussarela, calabresa fatiada e cebola</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 38,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Calabresa" data-price="38.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="menu-card" data-category="tradicional">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=500&fit=crop" alt="Pizza Portuguesa">
+                        <div class="menu-card-badge best-seller">Mais Vendida</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Portuguesa</h3>
+                        <p class="menu-card-description">Molho de tomate, mussarela, presunto, ovos, cebola, azeitona e orégano</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 42,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Portuguesa" data-price="42.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 4 -->
+                <div class="menu-card" data-category="tradicional">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&h=500&fit=crop" alt="Pizza Quatro Queijos">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Quatro Queijos</h3>
+                        <p class="menu-card-description">Mussarela, provolone, parmesão, gorgonzola e orégano</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 44,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Quatro Queijos" data-price="44.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 5 -->
+                <div class="menu-card" data-category="especial">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=500&h=500&fit=crop" alt="Pizza Supreme">
+                        <div class="menu-card-badge special">Especial</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Supreme</h3>
+                        <p class="menu-card-description">Molho especial, mussarela, pepperoni, cogumelos, pimentão, azeitona e cebola</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 52,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Supreme" data-price="52.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 6 -->
+                <div class="menu-card" data-category="especial">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&h=500&fit=crop" alt="Pizza Pepperoni">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Pepperoni Especial</h3>
+                        <p class="menu-card-description">Molho de tomate, mussarela extra, pepperoni importado e orégano</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 48,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Pepperoni Especial" data-price="48.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 7 -->
+                <div class="menu-card" data-category="especial">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=500&h=500&fit=crop" alt="Pizza Frango com Catupiry">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Frango com Catupiry</h3>
+                        <p class="menu-card-description">Molho branco, mussarela, frango desfiado e catupiry original</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 46,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Frango com Catupiry" data-price="46.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 8 -->
+                <div class="menu-card" data-category="especial">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&h=500&fit=crop" alt="Pizza Bacon">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Bacon Lovers</h3>
+                        <p class="menu-card-description">Molho de tomate, mussarela, bacon crocante, cheddar e cebola caramelizada</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 49,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Bacon Lovers" data-price="49.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 9 -->
+                <div class="menu-card" data-category="doce">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&h=500&fit=crop" alt="Pizza de Chocolate">
+                        <div class="menu-card-badge sweet">Doce</div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Chocolate com Morango</h3>
+                        <p class="menu-card-description">Chocolate ao leite, morangos frescos e granulado</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 39,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Chocolate com Morango" data-price="39.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 10 -->
+                <div class="menu-card" data-category="doce">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1549671878-3f3c5a6e7a8d?w=500&h=500&fit=crop" alt="Pizza de Brigadeiro">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Brigadeiro</h3>
+                        <p class="menu-card-description">Brigadeiro cremoso com chocolate branco e granulado de chocolate</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-prices">
+                                <span class="price">R$ 37,90</span>
+                                <span class="size">Média</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-name="Brigadeiro" data-price="37.90">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&h=800&fit=crop" alt="Pizzaiolo preparando pizza">
+                    <div class="about-experience">
+                        <span class="experience-number">15+</span>
+                        <span class="experience-text">Anos de Experiência</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a Suprema Pizza</h2>
+                    <p class="about-description">
+                        Há mais de 15 anos, a Suprema Pizza tem sido sinônimo de qualidade e tradição na arte de fazer pizzas. 
+                        Nossa paixão pela culinária italiana e o compromisso com ingredientes frescos e selecionados nos tornou 
+                        referência em delivery de pizzas artesanais.
+                    </p>
+                    <p class="about-description">
+                        Cada pizza é preparada com cuidado e atenção aos detalhes, utilizando nossa exclusiva receita de massa, 
+                        fermentada naturalmente por 48 horas, e assada em forno à lenha para garantir aquele sabor inconfundível 
+                        e a textura perfeita.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Ingredientes Premium</h4>
+                                <p>Selecionados diariamente dos melhores fornecedores</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Massa Artesanal</h4>
+                                <p>Fermentação natural de 48 horas para máxima leveza</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Forno à Lenha</h4>
+                                <p>Cozimento tradicional para sabor autêntico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galeria</h2>
+                <p class="section-subtitle">Nossas deliciosas criações</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop" alt="Pizza 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=600&fit=crop" alt="Pizza 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&h=600&fit=crop" alt="Pizza 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=600&h=600&fit=crop" alt="Pizza 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=600&fit=crop" alt="Pizza 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&h=600&fit=crop" alt="Pizza 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Estamos prontos para atender você</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>(11) 3456-7890</p>
+                            <p>(11) 98765-4321</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-mail</h4>
+                            <p>contato@supremapizza.com</p>
+                            <p>pedidos@supremapizza.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Endereço</h4>
+                            <p>Rua das Pizzas, 123</p>
+                            <p>Centro - São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário</h4>
+                            <p>Seg - Dom: 18h - 00h</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Seu Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo footer-logo">
+                        <i class="fas fa-pizza-slice"></i>
+                        <span>Suprema Pizza</span>
+                    </div>
+                    <p class="footer-description">
+                        A melhor pizza delivery da cidade! Pizzas artesanais com ingredientes frescos e de qualidade.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> contato@supremapizza.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua das Pizzas, 123 - SP</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Receba nossas promoções exclusivas</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Suprema Pizza. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Seu Carrinho</h3>
+                <button class="cart-close" id="cartClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-modal-body" id="cartModalBody">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="cart-total-price" id="cartTotalPrice">R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
